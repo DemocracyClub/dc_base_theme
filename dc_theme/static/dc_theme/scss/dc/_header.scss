@@ -15,12 +15,11 @@ body > header {
     text-rendering: geometricPrecision;
     font-size: 2.5rem;
 
-    a {
-      color: $black-100;
-    }
-
     @include breakpoint(small only) {
         font-size: 1.8rem;
     }
+  }
+  a {
+    color: $black-100;
   }
 }
