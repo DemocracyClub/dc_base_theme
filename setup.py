@@ -33,7 +33,7 @@ for dirpath, dirnames, filenames in os.walk(app_dir):
 
 
 setup(name='DC Base Theme',
-      version='0.3.4',
+      version='0.3.5',
       description='Base assets for DC projects',
       author='Sym Roe',
       author_email='sym.roe@democracyclub.org.uk',
@@ -47,6 +47,8 @@ setup(name='DC Base Theme',
       include_package_data=True,
       install_requires=[
           'django-pipeline==1.6.9',
-          'libsass==0.11.1',
+          'libsass==0.13.7',
+          'jsmin==2.2.2',
+
       ],
 )

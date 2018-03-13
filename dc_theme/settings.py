@@ -25,6 +25,7 @@ DEFAULT_PIPELINE = {
     ),
     'SASS_BINARY': 'sassc',
     'SASS_ARGUMENTS': ' '.join(SASS_ARGUMENT_LIST),
+    'CSS_COMPRESSOR': 'pipeline.compressors.NoopCompressor',
     'STYLESHEETS': {
         'styles': {
             'source_filenames': [],
@@ -34,6 +35,7 @@ DEFAULT_PIPELINE = {
             },
         },
     },
+    'JS_COMPRESSOR': 'pipeline.compressors.jsmin.JSMinCompressor',
     'JAVASCRIPT': {
         'scripts': {
             'source_filenames': [
