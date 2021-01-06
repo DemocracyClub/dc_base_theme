@@ -22,6 +22,7 @@ def fullsplit(path, result=None):
         return result
     return fullsplit(head, [tail] + result)
 
+
 for dirpath, dirnames, filenames in os.walk(app_dir):
     for i, dirname in enumerate(dirnames):
         if dirname.startswith('.'):
