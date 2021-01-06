@@ -56,4 +56,5 @@ setup(
         'jsmin==2.2.2',
 
     ],
+    setup_requires=['wheel']
 )
