@@ -1,18 +1,27 @@
 {% extends "dc_base_naked.html" %}
 
-{% load staticfiles %}
+{% load i18n staticfiles %}
 
 {% block body_base %}
-  {% block header %}
-  <header role="banner">
-    <div class="container">
-      <a href="/">
-        <img src="{% static site_logo %}" alt="{{ site_title }}" style="align:center;width:95%;max-width:{{ site_logo_width }}">
-      </a>
-      {% block site_menu %}{% endblock site_menu %}
-    </div>
-  </header>
-  {% endblock header %}
+
+{% block header %}
+    <header role="banner">
+        <div class="container">
+            <a href="/">
+                <img src="{% static "dc_theme/icons/apple-touch-icon.png" %}" alt="">
+            <div class="title-text">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% if LANGUAGE_CODE != "en" %}
+                    <div lang="en" dir="ltr">{% language "en" %}{{ site_title }}{% endlanguage %}</div>
+                {% endif %}
+                <div{% if LANGUAGE_CODE != "en" %} class="subtitle"{% endif %}>{{ site_title }}</div>
+            </div>
+            </a>
+            {% block site_menu %}{% endblock site_menu %}
+        </div>
+    </header>
+{% endblock header %}
+
 
   {# {% if messages %} #}
   {#   {% for message in messages %} #}
