@@ -11,10 +11,10 @@
                 <img src="{% static "dc_theme/icons/apple-touch-icon.png" %}" alt="">
             <div class="title-text">
                 {% get_current_language as LANGUAGE_CODE %}
-                {% if language_code != "en" %}
+                {% if LANGUAGE_CODE != "en" %}
                     <div lang="en" dir="ltr">{% language "en" %}{{ site_title }}{% endlanguage %}</div>
                 {% endif %}
-                <div{% if language_code != "en" %} class="subtitle"{% endif %}>{{ site_title }}</div>
+                <div{% if LANGUAGE_CODE != "en" %} class="subtitle"{% endif %}>{{ site_title }}</div>
             </div>
             </a>
             {% block site_menu %}{% endblock site_menu %}
