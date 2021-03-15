@@ -1,14 +1,40 @@
 body > header {
-  background-color:$header_bg;
+  background-color: $header_bg;
+  font-family: $sanserif-font;
 
-  & .container {
+  a {
+    text-decoration: none;
+    color: $heading-text-colour;
+    display: block;
+
+  }
+
+  .container {
     box-sizing:border-box;
-    padding:0.5em 0 0 0;
+    padding:0.5em 0;
 
-    & img {
-      width: 300px;
-      max-width:300px;
-      min-width:200px;
+    img {
+      width: 100px;
+      max-width:100px;
+      min-width:100px;
+      float: left;
+      margin-right: 0.5em;
+    }
+
+    .title-text {
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      div {
+        font-size: 1.5em;
+        line-height: 1.1;
+        &.subtitle {
+          font-size: 1em;
+        }
+      }
+
     }
   }
 }
