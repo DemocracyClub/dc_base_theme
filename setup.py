@@ -53,7 +53,7 @@ setup(
     install_requires=[
         'django-pipeline>=1.6.8,<2.0',
         'libsass==0.14.1',
-        'jsmin==2.2.2',
+        'jsmin==3.0.0',
 
     ],
     setup_requires=['wheel']
