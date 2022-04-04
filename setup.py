@@ -37,7 +37,7 @@ for dirpath, dirnames, filenames in os.walk(app_dir):
 
 
 setup(
-    name='DC Base Theme',
+    name='dc-base-theme',
     version='0.3.12',
     description='Base assets for DC projects',
     author='Sym Roe',
