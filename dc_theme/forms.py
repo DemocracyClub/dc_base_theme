@@ -12,7 +12,7 @@ class DCHeaderField(forms.Field):
     """
 
     def __init__(self, *args, **kwargs):
-        kwargs['required'] = False
+        kwargs["required"] = False
         super().__init__(*args, **kwargs)
 
 
@@ -23,7 +23,7 @@ class DCDateField(forms.MultiValueField):
     def __init__(self, *args, **kwargs):
         # Define one message for all fields.
         error_messages = {
-            'incomplete': 'Enter a country calling code and a phone number.',
+            "incomplete": "Enter a country calling code and a phone number.",
         }
 
         fields = (
