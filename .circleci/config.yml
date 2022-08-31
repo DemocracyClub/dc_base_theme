@@ -31,7 +31,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install pytest pytest-django pytest-flakes pytest-flake8
+            pip install pytest pytest-django pytest-flakes
 
       - save_cache:
           paths:
@@ -43,7 +43,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            pytest --flakes --flake8
+            pytest --flakes
 
       - store_artifacts:
           path: test-reports
