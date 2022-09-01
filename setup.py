@@ -5,7 +5,7 @@ from setuptools import setup
 
 packages = []
 data_files = []
-app_dir = 'dc_theme'
+app_dir = "dc_theme"
 
 
 def fullsplit(path, result=None):
@@ -16,7 +16,7 @@ def fullsplit(path, result=None):
     if result is None:
         result = []
     head, tail = os.path.split(path)
-    if head == '':
+    if head == "":
         return [tail] + result
     if head == path:
         return result
@@ -25,36 +25,36 @@ def fullsplit(path, result=None):
 
 for dirpath, dirnames, filenames in os.walk(app_dir):
     for i, dirname in enumerate(dirnames):
-        if dirname.startswith('.'):
+        if dirname.startswith("."):
             del dirnames[i]
 
-    if '__init__.py' in filenames:
-        packages.append('.'.join(fullsplit(dirpath)))
+    if "__init__.py" in filenames:
+        packages.append(".".join(fullsplit(dirpath)))
 
     elif filenames:
-        data_files.append(
-            [dirpath, [os.path.join(dirpath, f) for f in filenames]])
+        data_files.append([dirpath, [os.path.join(dirpath, f) for f in filenames]])
 
 
 setup(
-    name='DC Base Theme',
-    version='0.3.12',
-    description='Base assets for DC projects',
-    author='Sym Roe',
-    author_email='sym.roe@democracyclub.org.uk',
+    name="DC Base Theme",
+    version="0.3.12",
+    description="Base assets for DC projects",
+    author="Sym Roe",
+    author_email="sym.roe@democracyclub.org.uk",
     packages=packages,
-    package_data={'dc_theme': [
-        '*.scss',
-        '*.html',
-        '*.js',
-        '*.png',
-    ]},
+    package_data={
+        "dc_theme": [
+            "*.scss",
+            "*.html",
+            "*.js",
+            "*.png",
+        ]
+    },
     include_package_data=True,
     install_requires=[
-        'django-pipeline==2.0.8',
-        'libsass==0.14.1',
-        'jsmin==3.0.0',
-
+        "django-pipeline==2.0.8",
+        "libsass==0.14.1",
+        "jsmin==3.0.0",
     ],
-    setup_requires=['wheel']
+    setup_requires=["wheel"],
 )
