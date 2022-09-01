@@ -3,6 +3,8 @@ import os
 
 from setuptools import setup
 
+import dc_theme
+
 packages = []
 data_files = []
 app_dir = "dc_theme"
@@ -34,10 +36,13 @@ for dirpath, dirnames, filenames in os.walk(app_dir):
     elif filenames:
         data_files.append([dirpath, [os.path.join(dirpath, f) for f in filenames]])
 
+def get_version():
+    return dc_theme.__version__ 
+
 
 setup(
     name="DC Base Theme",
-    version="0.3.12",
+    version=get_version(),
     description="Base assets for DC projects",
     author="Sym Roe",
     author_email="sym.roe@democracyclub.org.uk",
