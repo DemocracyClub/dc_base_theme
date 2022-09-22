@@ -58,7 +58,7 @@ setup(
     include_package_data=True,
     install_requires=[
         "django-pipeline==2.0.8",
-        "libsass==0.14.1",
+        "libsass==0.21.0",
         "jsmin==3.0.0",
     ],
     setup_requires=["wheel"],
